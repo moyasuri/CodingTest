@@ -1,29 +1,65 @@
 #include<iostream>
-#include<map>
-
-
+#include<algorithm>
+#include <vector>
 using namespace std;
-int t, n;
-string a, b;
-int main() {
-    cin >> t; // testcase를 받아요
-    while (t--) {
-        map<string, int> _map;
-        
-        cin >> n;
 
-        for (int i = 0; i < n; i++) {
-            cin >> a >> b;
-            _map[b]++; // 띄어쓰기 기준이니까 뒤의 스트링을 받아요 앞에가 뭔지는 중요하지않아요
-        }
-        
-        long long ret = 1;
-        
-        for (auto c : _map) {
-            ret *= ((long long)c.second + 1);
-        }
-        ret--;
-        cout << ret << "\n";
+bool conf(pair<int, int> a, pair<int, int> b)
+{
+
+    return a.second > b.second;
+
+}
+
+int main(int argc, char** argv)
+{
+
+
+    int W, N;
+    cin >> W >> N;
+
+    int cnt_T = N;
+
+    vector<pair<int, int>> myPair;
+
+    int answer = 0;
+    while (cnt_T--)
+    {
+        int temp1, temp2;
+        cin >> temp1 >> temp2;
+        myPair.push_back({ temp1,temp2 });
+
     }
+    sort(myPair.begin(), myPair.end(), conf);
+
+    for (pair<int, int> p: myPair)
+    {
+        if (W - p.first >= 0)
+        {
+            W -= p.first;
+            int value = p.second * p.first;
+            answer += value;
+        }
+        else
+        {
+            int value = p.second * W;
+            answer += value;
+            break;
+
+        }
+
+    }
+
+    cout << answer;
+
+
+
+
+
+
+
+
+
+
+
     return 0;
 }
