@@ -53,10 +53,10 @@ int main()
 
 	_map["abc"]++;
 
-	for (auto c : _map)
-	{
-		c.second
-	}
+	//for (auto c : _map)
+	//{
+	//	c.second
+	//}
 
 	/*cout << "abc".second;*/
 
