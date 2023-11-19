@@ -24,6 +24,9 @@
     <ClCompile Include="1_j.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="wt.cpp">
+=======
     <ClCompile Include="1_k.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -43,6 +46,7 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="prob.cpp">
+>>>>>>> 42187b2c5466f6c44ff7691d6614fedd02a5b3c9
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
